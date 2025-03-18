@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from llm import generate_sql
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    print("🔹 SQL Generator на основе LLM")
+    print("Введите ваш запрос (например: 'Выбери всех пользователей с Gmail'):")
+
+    user_input = input(">> ")
+    sql_query = generate_sql(user_input)
+
+    print("\n💡 Сгенерированный SQL-запрос:\n")
+    print(sql_query)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
